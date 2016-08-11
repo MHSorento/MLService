@@ -8,7 +8,7 @@ class Handler(SimpleHTTPRequestHandler):
 		if None != re.search('/recommendations/*', self.path):
 			sku = self.path.split('/')[-1]
 			finder = closest_skus.SKUFeatureValues()
-			recs = finder.get_closest_sku(sku, 3)
+			recs = finder.get_closest_sku(sku, 5)
 			if sku is not None and recs is not None:
 				self.send_response(200)
 				self.send_header('Content-Type', 'application/json')
