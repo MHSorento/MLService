@@ -1,0 +1,4 @@
+imagenet_data
+.Python
+**/*.pyc
+**/.DS_Store
